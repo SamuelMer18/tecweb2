@@ -1,22 +1,32 @@
-<?php
-$nombre = $_GET['nombre'];
-$apellido = $_GET['apellido'];
-$edad = $_GET['edad'];
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php
+    echo "<h1>Ejercicio 3<h1>"
+    ?>
+</head>
 
-echo "<h3> Nombre:$nombre</h3>";
-echo "<h3> Apellido:$apellido</h3>";
-echo "<h3> Edad:$edad</h3>";
-if ($edad >= 18) {
-    $hobby = $_GET['hobby'];
-    echo "<h3> Hobby:$hobby</h3>";
-    $color = $_GET['color'];
-    echo "<h3> Color:$color</h3>";
-} else {
-    $deporte = $_GET['deporte'];
-    echo "<h3> Deporte:$deporte</h3>";
-    echo "<h3> Es menor de edad</h3>";
-}
+<body>
+    <?php
+    $tja = 2200;
+    $cercado = 4000;
+    $avilez = 14000;
+    $ciudad = $tja;
+    print "<p>La poblacion de estudiantes en ciudad es: {$ciudad}</p>";
+    $ciudad = $cercado;
+    print "<p>La poblacion de estudiantes en ciudad es: {$ciudad}</p>";
+    $ciudad = $avilez;
+    print "<p>La poblacion de estudiantes en ciudad es: {$ciudad}</p>";
+    //definiendo una constante
+    define("TipoCambio", 6.97);
+    $deuda = 1200;
+    print "tu deuda en dolares es " . ($deuda * TipoCambio);
 
-// localhost/tecweb2/ejercicio2.php?nombre=juan&apellido=lopez&edad=18&hobby=programar&color=rojo
-// localhost/tecweb2/ejercicio2.php?nombre=juan&apellido=lopez&edad=16&deporte=futbol
+    ?>
+</body>
+
+</html>
