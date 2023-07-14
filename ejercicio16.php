@@ -22,10 +22,18 @@
         }
         return $respuesta;
     }
+    function CalcularIva($valor, $decs)
+    {
+        $total = $valor - ($valor * $decs);
+        return $total;
+    }
     saludo("Albert");
     saludo("Albert");
     saludo("Albert");
     print "La respuesta es " . ValidarEdad(50) . "<br>";
+    print "El total a pagar es " . CalcularIva(400, 0.5) . "<br>";
+    print "El total a pagar es " . CalcularIva(100, 0.5) . "<br>";
+    print "El total a pagar es " . CalcularIva(300, 0.5) . "<br>";
     ?>
 </body>
 
