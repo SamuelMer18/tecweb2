@@ -40,13 +40,13 @@
     $notas = array(40, 80, 90, 100, 25, 36);
     var_dump($notas);
     echo "<br>";
-    $promedio = array_sum($notas) / count($notas);
     $actual = current($notas);
     $final = end($notas);
     $previo = prev($notas);
+    $actual = current($notas);
     $aprobados = 0;
     foreach ($notas as $nota) {
-        if ($nota >= 60) {
+        if ($nota >= 51) {
             $aprobados++;
         }
     }
