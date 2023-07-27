@@ -1,0 +1,12 @@
+
+---
+3Nombre: asdfs
+Correo: qdjsfs@sasdfsd
+Fecha de nacimiento: 2023-06-30
+Sexo: masculino
+Vacuna: no
+Tipo: Sinopharm
+Cantidad de dosis: 1ra
+Información: Internet
+Medio de información: si
+Tercera opción: si
