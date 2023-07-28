@@ -18,8 +18,22 @@ if (isset($_FILES['foto'])) {
             $errores[] = "Imagen ya existe";
         }
         if (empty($errores)) {
-            copy($_FILES['foto']['tmp_name'], "img/" . $filename);
-            echo "Archivo subido";
+            // copy($_FILES['foto']['tmp_name'], "img/" . $filename);
+            // echo "Archivo subido";
+            include("conectar.php");
+            $imagen_array = (getimagesize($_FILES['foto']['tmp_name']));
+            $imagenContenido = file_get_contents($_FILES['foto']['tmp_name']);
+            $sql = "INSERT INTO imagenes (ancho,altura,tipo,imagen,nombre) VALUES(";
+            $sql .= $imagen_array[0] . ",";
+            $sql .= $imagen_array[1] . ",";
+            $sql .= "'" . $_FILES['foto']['type'] . "',";
+            $sql .= "'" . addslashes($imagenContenido) . "',";
+            $sql .= "'" . $_FILES['foto']['name'] . "')";
+            if (mysqli_query($conexion, $sql)) {
+                echo "Se inserto Correctamente";
+            } else {
+                print "Error al insertar";
+            }
         } else {
             print_r($errores);
         }
