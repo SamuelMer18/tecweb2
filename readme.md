@@ -1,5 +1,12 @@
+<!-- realiza un readme sobre todo -->
+
 # Tecnologia Web 2
 
-## Lista de Ejercicios
+//que cada carpeta tenga en su readme.md una descripcion de lo que contiene
 
-### Ejercicio 1
+## Contenido
+
+- [Avance]()
+- [Practicas]()
+- [Practicas en Clase]()
+- [Examenes]()
